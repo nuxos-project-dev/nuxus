@@ -1,11 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (c) 2026 Omer PALA
 
-DEFAULTS := src/kernel \
-					 src/mm \
-					 src/uefi \
-					 src/drivers/qemu_uart \
-					 src/kernel/syscalls
 ARCH := $(shell uname -m)
 
 ifeq ($(ARCH),arm64)
@@ -21,6 +16,13 @@ ifeq ($(ARCH),riscv64)
 	@echo "riscv64 is unsupported for now, Cross-compiling..."
 	ARCH := aarch64
 endif
+
+DEFAULTS := src/kernel \
+					 src/mm \
+					 src/uefi \
+					 src/drivers/qemu_uart \
+					 src/kernel/syscalls \
+					 src/arch/$(ARCH)
 
 CC := clang
 AS := clang
