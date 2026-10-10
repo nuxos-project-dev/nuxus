@@ -17,7 +17,7 @@ ifeq ($(ARCH),x86_64)
 	ARCH := aarch64
 endif
 
-ifeq ($(ARCH), riscv64)
+ifeq ($(ARCH),riscv64)
 	@echo "riscv64 is unsupported for now, Cross-compiling..."
 	ARCH := aarch64
 endif
