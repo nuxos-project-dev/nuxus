@@ -1,8 +1,8 @@
 # Lunix, a unix-like kernel compatible with linux
 
-[License: GPLv2](https://img.shields.io/badge/License-GPLv2-yellow)
-[Written in: C & Assembly](https://img.shields.io/badge/Written%20in-C%20&%20Assembly-blue)
-[License: BSD 2 Clause](https://img.shields.io/badge/License-BSD%202%20Clause-red)
+![License: GPLv2](https://img.shields.io/badge/License-GPLv2-yellow)
+![Written in: C & Assembly](https://img.shields.io/badge/Written%20in-C%20&%20Assembly-blue)
+![License: BSD 2 Clause](https://img.shields.io/badge/License-BSD%202%20Clause-red)
 
 ## Usage
 
