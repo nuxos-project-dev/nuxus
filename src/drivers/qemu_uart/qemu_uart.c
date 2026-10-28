@@ -3,8 +3,8 @@
  *
  * Copyright (c) 2026 Omer PALA
  *
- * Lunix - a unix-like kernel
- * QEMU UART driver for lunix kernel
+ * Nuxus - a unix-like kernel
+ * QEMU UART driver for Nuxus kernel
  */
 #include <stdint.h>
 #define UART0_BASE 0x09000000UL

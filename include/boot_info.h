@@ -1,3 +1,13 @@
+/*
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ * Copyright (c) 2026 Omer PALA
+ *
+ * Nuxus - a unix-like kernel
+ *
+ * A header defines boot information
+ */
+
 #ifndef BOOT_INFO_H
 #define BOOT_INFO_H
 

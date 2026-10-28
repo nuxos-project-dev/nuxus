@@ -3,7 +3,9 @@
  *
  * Copyright (c) 2026 Omer PALA
  *
- * Lunix - A unix-like kernel
+ * Nuxus - A unix-like kernel
+ *
+ * A wrapper for wfi
  */
 
 .section .text

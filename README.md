@@ -1,4 +1,4 @@
-# Lunix, a unix-like kernel compatible with linux
+# Nuxus, a unix-like kernel compatible with linux
 
 ![License: GPLv2](https://img.shields.io/badge/License-GPLv2-yellow)
 ![Written in: C & Assembly](https://img.shields.io/badge/Written%20in-C%20&%20Assembly-blue)

@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2026 Omer PALA
  *
- * Lunix - A unix-like kernel
+ * Nuxus - A unix-like kernel
  *
  * Kernel main function
  */

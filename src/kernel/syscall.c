@@ -3,9 +3,9 @@
  *
  * Copyright (c) 2026 Omer PALA
  *
- * Lunix - a unix-like kernel
+ * Nuxus - a unix-like kernel
  *
- * Syscall diagnose mechanism for lunix kernel
+ * Syscall diagnose mechanism for Nuxus kernel
  */
 
 #include <types.h>

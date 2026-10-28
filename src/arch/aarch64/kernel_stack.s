@@ -3,7 +3,9 @@
  *
  * Copyright (c) 2026 Omer PALA
  *
- * Lunix - a unix-like kernel
+ * Nuxus - a unix-like kernel
+ *
+ * Stack switcher for ExitBootServices
  */
 
 .section .bss
