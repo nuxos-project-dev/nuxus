@@ -1,0 +1,40 @@
+name: Nightly build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y clang build-essential
+
+    - name: Build and archive
+      run: |
+        make
+        tar -czf nuxus-nightly.tar.gz build/
+
+    - name: Remove older nightly tag & release
+      run: |
+        gh release delete nightly --cleanup-tag --yes || true
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: nightly
+        name: "Nightly build (${{ github.run_number }})"
+        body: "Nightly build"
+        prerelease: true
+        files: nuxus-nightly.tar.gz
