@@ -8,8 +8,8 @@
 
 // Type definitions for lunix
 
-#ifndef LUNIX_TYPES_H
-#define LUNIX_TYPES_H
+#ifndef NUXUS_TYPES_H
+#define NUXUS_TYPES_H
 
 // Unsigned types
 typedef unsigned long long  uint64_t;

@@ -7,8 +7,8 @@
  * Error types
  */
 
-#ifndef LUNIX_ERRNO_H
-#define LUNIX_ERRNO_H
+#ifndef NUXUS_ERRNO_H
+#define NUXUS_ERRNO_H
 
 #define EPERM       1
 #define ENOENT      2

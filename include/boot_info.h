@@ -8,8 +8,8 @@
  * A header defines boot information
  */
 
-#ifndef BOOT_INFO_H
-#define BOOT_INFO_H
+#ifndef NUXUS_BOOT_INFO_H
+#define NUXUS_BOOT_INFO_H
 
 #ifndef EFIAPI
 #include <types.h>

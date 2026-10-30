@@ -7,8 +7,8 @@
  * Compiler attributes
  */
 
-#ifndef LUNIX_COMPILER_H
-#define LUNIX_COMPILER_H
+#ifndef NUXUS_COMPILER_H
+#define NUXUS_COMPILER_H
 
 #define UNUSED(var) ((void)var)
 

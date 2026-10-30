@@ -8,8 +8,8 @@
  * Syscall number definitions
  */
 
-#ifndef LUNIX_SYSCALL_H
-#define LUNIX_SYSCALL_H
+#ifndef NUXUS_SYSCALL_H
+#define NUXUS_SYSCALL_H
 #include <types.h>
 
 typedef int64_t (*syscall_func_t)(
