@@ -34,7 +34,7 @@ AS_OBJ := $(AS_SRC:.s=.o)
 CFLAGS := --target=$(ARCH)-unknown-windows -ffreestanding -nostdlib -c -Iinclude
 ASFLAGS := -c --target=$(ARCH)-unknown-windows
 LDFLAGS := -subsystem:efi_application -entry:uefi_init
-TARGET := build/lunix.efi
+TARGET := build/nuxus.efi
 OBJ := $(AS_OBJ) $(C_OBJ)
 
 %.o: %.c
