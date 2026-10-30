@@ -16,15 +16,22 @@
 #endif
 
 typedef struct {
+  uint64_t mem_map;
+  uint64_t mem_map_size;
+  uint64_t mem_desc_size;
+} mem_info_t;
+
+typedef struct {
   uint64_t fb_base;
   uint64_t fb_size;
   uint32_t fb_width;
   uint32_t fb_height;
   uint32_t fb_pitch;
+} fb_info_t;
 
-  uint64_t mem_map;
-  uint64_t mem_map_size;
-  uint64_t mem_desc_size;
+typedef struct {
+  fb_info_t fb_info;
+  mem_info_t mem_info;
 } boot_info_t;
 
-#endif // !BOOT_INFO_H
+#endif

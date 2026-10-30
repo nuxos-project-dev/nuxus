@@ -43,21 +43,21 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  boot_info.fb_base       = gop->Mode->FrameBufferBase;
-  boot_info.fb_size       = gop->Mode->FrameBufferSize;
-  boot_info.fb_width      = gop->Mode->Information->HorizontalResolution;
-  boot_info.fb_height     = gop->Mode->Information->VerticalResolution;
-  boot_info.fb_pitch      = gop->Mode->Information->PixelsPerScanLine * 4;
+  boot_info.fb_info.fb_base       = gop->Mode->FrameBufferBase;
+  boot_info.fb_info.fb_size       = gop->Mode->FrameBufferSize;
+  boot_info.fb_info.fb_width      = gop->Mode->Information->HorizontalResolution;
+  boot_info.fb_info.fb_height     = gop->Mode->Information->VerticalResolution;
+  boot_info.fb_info.fb_pitch      = gop->Mode->Information->PixelsPerScanLine * 4;
 
   uintn_t map_key;
   uint32_t desc_version;
-  boot_info.mem_map_size = sizeof(static_map_buffer);
-  boot_info.mem_map = (uint64_t)(uintptr_t)static_map_buffer;
+  boot_info.mem_info.mem_map_size = sizeof(static_map_buffer);
+  boot_info.mem_info.mem_map = (uint64_t)(uintptr_t)static_map_buffer;
 
   status = BS->GetMemoryMap(
-    &boot_info.mem_map_size,
-    (efi_memory_descriptor_t*)(uintptr_t)boot_info.mem_map,
-    &map_key, &boot_info.mem_desc_size,
+    &boot_info.mem_info.mem_map_size,
+    (efi_memory_descriptor_t*)(uintptr_t)boot_info.mem_info.mem_map,
+    &map_key, &boot_info.mem_info.mem_desc_size,
     &desc_version
   );
   if (EFI_ERROR(status)) {
@@ -69,11 +69,11 @@ int main(int argc, char *argv[]) {
   if (EFI_ERROR(status)) {
     printf("Failed to exit BootServices\n! Retrying...");
 
-    boot_info.mem_map_size = sizeof(static_map_buffer);
+    boot_info.mem_info.mem_map_size = sizeof(static_map_buffer);
     status = BS->GetMemoryMap(
-      &boot_info.mem_map_size,
-      (efi_memory_descriptor_t*)(uintptr_t)boot_info.mem_map,
-      &map_key, &boot_info.mem_desc_size,
+      &boot_info.mem_info.mem_map_size,
+      (efi_memory_descriptor_t*)(uintptr_t)boot_info.mem_info.mem_map,
+      &map_key, &boot_info.mem_info.mem_desc_size,
       &desc_version
     );
     if (EFI_ERROR(status)) {
