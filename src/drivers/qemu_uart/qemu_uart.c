@@ -6,7 +6,7 @@
  * Nuxus - a unix-like kernel
  * QEMU UART driver for Nuxus kernel
  */
-#include <stdint.h>
+#include <nuxus/types.h>
 #define UART0_BASE 0x09000000UL
 
 #define UART0_DR (*(volatile uint32_t*)(UART0_BASE + 0x00)) //Data register

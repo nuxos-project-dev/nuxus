@@ -39,7 +39,7 @@
   *
   * i fixed SWAPINIT
   */
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 static __inline char	*med3(char *, char *, char *, __compar_fn_t cmp);
 static __inline void	 swapfunc(char *, char *, int, int);

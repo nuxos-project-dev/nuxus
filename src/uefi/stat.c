@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 /* fstat is in stdio.c because we can't access static variables otherwise... */
 

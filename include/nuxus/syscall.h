@@ -10,7 +10,7 @@
 
 #ifndef NUXUS_SYSCALL_H
 #define NUXUS_SYSCALL_H
-#include <types.h>
+#include <nuxus/types.h>
 
 typedef int64_t (*syscall_func_t)(
   reg_t arg1, reg_t arg2, reg_t arg3,

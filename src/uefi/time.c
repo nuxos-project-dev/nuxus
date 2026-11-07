@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 static struct tm __tm;
 time_t __mktime_efi(efi_time_t *t);

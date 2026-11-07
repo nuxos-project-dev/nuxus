@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 void *memcpy(void *dst, const void *src, size_t n)
 {

@@ -8,9 +8,9 @@
  * Syscall diagnose mechanism for Nuxus kernel
  */
 
-#include <types.h>
-#include <syscall.h>
-#include <errno.h>
+#include <nuxus/types.h>
+#include <nuxus/syscall.h>
+#include <nuxus/errno.h>
 
 extern syscall_func_t syscall_table[];
 

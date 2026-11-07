@@ -8,8 +8,8 @@
  * Kernel main function
  */
 
-#include <boot_info.h>
-#include <stdint.h>
+#include <nuxus/boot_info.h>
+#include <nuxus/types.h>
 
 void kernel_main(boot_info_t *boot_info) {
   volatile uint32_t *fb = (volatile uint32_t*)(uintptr_t)boot_info->fb_info.fb_base;

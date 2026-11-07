@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 int errno = 0;
 static uint64_t __srand_seed = 6364136223846793005ULL;

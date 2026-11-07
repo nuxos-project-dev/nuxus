@@ -8,10 +8,10 @@
  * Decleration of sys_dummy syscall
  */
 
-#include <compiler.h>
-#include <syscall.h>
-#include <types.h>
-#include <errno.h>
+#include <nuxus/compiler.h>
+#include <nuxus/types.h>
+#include <nuxus/syscall.h>
+#include <nuxus/errno.h>
 
 SYSCALL_DEFINE(sys_dummy) {
   UNUSED(arg1); UNUSED(arg2); UNUSED(arg3);

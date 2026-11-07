@@ -8,8 +8,8 @@
  * Syscall table for Nuxus kernel
  */
 
-#include <syscall.h>
-#include <types.h>
+#include <nuxus/syscall.h>
+#include <nuxus/types.h>
 
 extern SYSCALL_DEFINE(sys_dummy);
 

@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 static efi_file_handle_t *__root_dir = NULL;
 static efi_serial_io_protocol_t *__ser = NULL;

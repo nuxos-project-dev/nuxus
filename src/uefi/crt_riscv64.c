@@ -29,7 +29,7 @@
  */
 #if defined (__riscv) && (__riscv_xlen == 64)
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 /* this is implemented by the application */
 extern int main(int argc, char_t **argv);

@@ -12,7 +12,7 @@
 #define NUXUS_BOOT_INFO_H
 
 #ifndef EFIAPI
-#include <types.h>
+  #include <nuxus/types.h>
 #endif
 
 typedef struct {

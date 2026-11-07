@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 int __remove(const wchar_t *__filename, int isdir);
 

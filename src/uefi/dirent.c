@@ -28,7 +28,7 @@
  *
  */
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 extern void __stdio_seterrno(efi_status_t status);
 static struct dirent __dirent;

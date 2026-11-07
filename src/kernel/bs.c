@@ -8,8 +8,8 @@
  * Efi start point and exiting BootServices
  */
 
-#include <uefi.h>
-#include <boot_info.h>
+#include <nuxus/uefi.h>
+#include <nuxus/boot_info.h>
 
 static boot_info_t boot_info;
 static uint8_t static_map_buffer[8192];

@@ -30,7 +30,7 @@
 
 #if defined (__x86_64__) || defined (_M_X64)
 
-#include <uefi.h>
+#include <nuxus/uefi.h>
 
 /* this is implemented by the application */
 extern int main(int argc, char_t **argv);
