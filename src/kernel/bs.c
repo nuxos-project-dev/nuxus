@@ -17,7 +17,7 @@ static uint8_t static_map_buffer[8192];
 extern void cpu_wait(void);
 extern void switch_to_kernel(boot_info_t *boot_info);
 
-int main(int argc, char *argv[]) {
+int main(void) {
   efi_status_t status;
 
   printf("Welcome to Lunix!\n");

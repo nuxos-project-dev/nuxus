@@ -33,6 +33,12 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
+
+ /*
+  * And me, Omer PALA <palaomer100@gmail.com>
+  *
+  * i fixed SWAPINIT
+  */
 #include <uefi.h>
 
 static __inline char	*med3(char *, char *, char *, __compar_fn_t cmp);
@@ -50,8 +56,8 @@ static __inline void	 swapfunc(char *, char *, int, int);
 		*pj++ = t;				\
         } while (--i > 0);				\
 }
-#define SWAPINIT(a, es) swaptype = ((char *)a - (char *)0) % sizeof(long) || \
-	es % sizeof(long) ? 2 : es == sizeof(long)? 0 : 1;
+#define SWAPINIT(a, es) swaptype = ((uintptr_t)(a)) % sizeof(long) || \
+	(es) % sizeof(long) ? 2 : (es) == sizeof(long)? 0 : 1;
 static __inline void
 swapfunc(char *a, char *b, int n, int swaptype)
 {

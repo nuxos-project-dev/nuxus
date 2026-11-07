@@ -31,7 +31,7 @@ C_SRC := $(foreach module, $(DEFAULTS), $(wildcard $(module)/*.c))
 AS_SRC := $(wildcard src/arch/$(ARCH)/*.s)
 C_OBJ := ${C_SRC:.c=.o}
 AS_OBJ := $(AS_SRC:.s=.o)
-CFLAGS := --target=$(ARCH)-unknown-windows -ffreestanding -nostdlib -c -Iinclude -O1 -pedantic
+CFLAGS := --target=$(ARCH)-unknown-windows -ffreestanding -nostdlib -c -Iinclude -O1 -pedantic -Wall -Wextra
 ASFLAGS := -c --target=$(ARCH)-unknown-windows
 LDFLAGS := -subsystem:efi_application -entry:uefi_init
 TARGET := build/nuxus.efi
