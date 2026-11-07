@@ -241,3 +241,5 @@ efi_status_t uefi_init (
 }
 
 #endif
+
+typedef int crt_aarch64_dummy_t; // Dummy translation unit

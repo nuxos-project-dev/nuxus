@@ -271,3 +271,5 @@ efi_status_t uefi_init (
 }
 
 #endif
+
+typedef int crt_riscv_dummy_t; // Dummy translation unit

@@ -166,7 +166,7 @@ void free (void *__ptr)
     if(EFI_ERROR(status)) errno = ENOMEM;
 }
 
-void abort ()
+void abort (void)
 {
 #ifndef UEFI_NO_TRACK_ALLOC
     if(__stdlib_allocs)
@@ -190,7 +190,7 @@ void exit (int __status)
     BS->Exit(IM, !__status ? 0 : (__status < 0 ? EFIERR(-__status) : EFIERR(__status)), 0, NULL);
 }
 
-int exit_bs()
+int exit_bs(void)
 {
     efi_status_t status = 0;
     efi_memory_descriptor_t *memory_map = NULL;
@@ -313,7 +313,7 @@ void srand(unsigned int __seed)
     __srand_seed = __seed - 1;
 }
 
-int rand()
+int rand(void)
 {
     efi_guid_t rngGuid = EFI_RNG_PROTOCOL_GUID;
     efi_rng_protocol_t *rng = NULL;
