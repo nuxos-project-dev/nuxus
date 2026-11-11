@@ -1,3 +1,13 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ *
+ * Copyright (c) 2026 Omer PALA
+ *
+ * Nuxus - a unix-like kernel
+ *
+ * Bitmap manipulation macros
+ */
+
 #ifndef NUXUS_BITMAP_H
 #define NUXUS_BITMAP_H
 
